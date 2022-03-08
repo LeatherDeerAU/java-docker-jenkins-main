@@ -4,7 +4,6 @@ pipeline {
         stage('Build') {
             agent { 
                 docker {
-                    label 'docker'
                     image 'maven:3.6.3-jdk-11' 
                 }
             } 
@@ -16,7 +15,6 @@ pipeline {
         stage('Run') {
             agent { 
                 docker {
-                    label 'docker'
                     image 'openjdk:11.0.7-jdk-slim' 
                 } 
             }
